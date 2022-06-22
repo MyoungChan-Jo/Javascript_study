@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>주석/변수</title>
+<script>//내부형
+    //주석문 입니다.
+    /*주석문 입니다.*/
+    /*
+      주석문
+      입니다.
+    */
+    
+    //문자
+    //alert("WEB DESIGN");
+    //alert('웹디자인');
+    //alert("123");
+    
+    //숫자
+    //alert(456);
+    
+    //D "web" design
+    //alert('D \"web\" design');
+    
+    //D 'web' design
+    //alert("D \'web\' design");
+    
+    /*
+    D
+    "web'
+    design
+    */
+    //alert("D \n\"web\'\ndesign");
+    
+    //document.write()
+    document.write("web design");
+    document.write("<hr>");
+    document.write("D\"web\"design");
+    document.write("<hr>");
+    document.write("D \'web\' design");
+    document.write("<hr>");
+    document.write("D \n\"web\'\ndesign"); // \n 오류는 안생기지만 실행안됨.
+    document.write("<hr>");
+    document.write("D <br>\"web\'<br>design");
+    document.write("<hr>");
+    document.write("D"+"<br>"+"web"+"<br>"+"design");
+    document.write("<hr>");
+    document.write("D"+"<br>"+"\"web\'"+"<br>"+"design");
+    document.write("<hr>");
+    document.write("D","<br>","web","<br>","design");
+    document.write("<hr>");
+    
+    //변수 선언 및 할당
+    //1. 문자형 데이터
+    var web1;
+    web1 = "안녕하세요";
+    //alert(web1);
+    document.write(web1);
+    document.write("<hr>");
+    
+    var web2;
+    web2 = 123;
+    web2 = 456;
+    web2 = "자바스크립트";
+    document.write(web2);  /*자바스크립트만 나올거임. 마지막거만 기억하기 때문.*/
+    document.write("<hr>");
+    
+    //2. 숫자형 데이터
+    var web3 = 10;
+    /*
+    위랑 똑같은 말임.
+    var web3;
+    web3 = 10;
+    */
+    var web4 = 20;
+    document.write(web3+web4);
+    document.write("<hr>");
+    
+    var web5,web6
+    web5 = "Hello";
+    web6 = "Javascript";
+    document.write(web5+web6);
+    document.write("<br>");
+    document.write(web5,web6);
+    document.write("<hr>");
+    
+    var web7 = "Hello", web8 = "123";
+    document.write(web7+web8);/*계산 없이 연결됨.*/
+    document.write("<br>");
+    document.write(web7,web8);
+    document.write("<hr>");
+    
+    //3. 논리형 데이터 true,false 따옴표로 묶어서 쓰면 안된다.
+    var web9 = false;
+    document.write(web9);
+    document.write("<hr>");
+    
+    //4. null형 데이터
+    var web10=null;
+    document.write(web10);
+    document.write("<hr>");
+    
+    //5.underfined
+    var web11;
+    var web12 = "Hello";
+    document.write(web11);
+</script>
+    <!--<script src="경로/파일명"></script>외부형-->
+</head>
+<body>
+
+<!--
+프론트엔드(front-end)
+- HTML/CSS/JAVASCRIPT/JQUERY
+- 사용자(user)의 눈에 보이는 부분
+- ex)회원가입 폼 만들기
+
+백엔드(back-end)
+- 사이트를 서버와 연동을 하여 DB로 전달
+- jsp,asp,php 등이 개발자
+- 사용자(user)의 눈에 보이지 않는 부분
+- 가입버튼을 누르면 실제 내용 DB로 전달
+
+자바스크립트(JAVASCRIPT)
+- 자바(X) => 어플개발, 게임 개발 등에 많이 사용하는 언어
+- HTML코드에 삽입하여 웹브라우저에서 많이 사용하는 프로그래밍 언어
+- 웹의 내용을 동적으로 바꾸거나 마우스 클릭같은 이벤트를 처리
+- 이미지에 마우스를 가져다 댔을 때, 이미지가 바뀐다든지, 메뉴가 열리는 등의 일
+- 대소문자 구분: A와a는 완전 다른 언어
+- 큰 따옴표와 작은 따옴표 모두 허용
+
+F12 콘솔 > 오류 있으면 바로 뜸. 여기서 확인 하여야 한다.
+
+-다양한 객체들로 구성되며 각 객체마다 다양한 메서드들을 가지고 있음(객체기반 스크립트 언어)
+  객체란 특정기능을 수행하는 단위체
+  객체(Object).메서드(Method);
+  복합기(Object).복사해라(Method);
+
+-객체종류
+  1. 내장객체: 자체적으로 가진 객체. String(문자) Data(날짜) Array(배열) Meth(수학)
+  2. 브라우저객체
+  3. 문서객체
+  
+*선언문
+- 자바스크립트 코드를 작성할 영역을 선언하는 곳
+- 이전 JavaScript <script type="text/javascript"> 이건 안씀 이제.
+- 내부형 스크립트=<script>스크립트 실행문;</script>
+- 외부형 스크립트=<script src="경로/파일명"></script>
+
+*위치
+1. 헤드와 헤드사이에 바디태그 읽기전(기본)
+2. 바디와 바디사이에 헤드태크를 실행한 후에 실행(이벤트 함수호출)
+
+*확장자
+- .js
+
+*주석
+1. 한줄주석=//내용
+2. 여러줄주석=/*내용*/
+
+*출력
+1. innerHTML : HTML내용정의
+2. document.write(). : 테스트 목적
+3. window.alert(). : 경고, 메세지 목적(window는 거의 생략)
+4. console.log(). : 디버깅을 위한 콘솔
+
+*입력 주의사항
+1. 대소문자 구분하여 작성
+2. 한줄코드 작성 후 세미콜론(;)
+3. 큰따옴표와 작음 따옴표 겹침 주의
+    ="<img src=" " alt=" " width=" " height=" ">"; => 이러면 실행 안됨.
+    ="<img src=' ' alt=' ' width=' ' height=' '>"; =>이런식으로 입력해야 함.
+    ='<img src=' ' alt=' ' width=' ' height=' '>'; =>이런식으로 입력해야 함.
+4. 중괄호{},소괄호()의 짝이 맞게 작성
+
+*window 객체 메서드
+- alert() 메세지창,확인버튼
+- prompt() 질문과 답변의 질의응답 창
+- confirm() 질문으로 확인이나 취소버튼을 나타냄.
+    1.alert()
+        - 문자형:문자나 숫자를 큰따옴표나 작은 따옴표로 표시한 데이터
+        - "Abc01"  "11AAA" "96"
+        - 숫자형: 숫자 큰따음포나 작은따옴표 사용하면 안됨.
+    2.prompt()
+    3.confirm()
+
+\(역슬래시) w 
+\n 줄바꿈
+\' 작은따옴표
+\" 큰 따옴표
+
+*객체(Object).메서드(Method);
+- document.write(); 문서객체, 문서출력 메서드
+- document.write() body에 내용을 찍어라(출력)
+
+*텍스트와 태그
+- "텍스트"+"<br>"
+- "텍스트<br>"
+- +는 연결을 의미
+
+*변수(Variables)
+- 변하는 데이터값(Data)를 저장하는 공간
+- 변수에는 한번에 1개의 데이터만 저장되고, 새로운 데이터가 입력되면 기존의 데이터는 삭제됨.
+
+*저장할 수 있는 데이터 종류
+- 문자형(String) :문자나 숫자를 큰따옴표(" ")또는 작은따옴표(' ')
+- 숫자형(Number) :숫자
+- 논리형(Boolean) :true,false
+- 빈(Null)데이터 :변수에 저장된 데이터를 비우고자 할 때 사용, 0이 아님
+- undefined : 값이 없는 변수의 값, 변수값이 등록되기 전의 기본값
+
+*변수선언
+- 1.var 변수명;
+- 2.var 변수명1, 변수명2....; 여러개의 변수 선언
+     var a,b,c;
+     var a;
+     var b;
+     var c;
+- 3.var 변수명=데이터 값. 오른쪽 값을 왼쪽에 넣어라 =가 같다는 의미가 아님.
+     var a=1; 1의 숫자 데이터를 a라는 공간에 넣어라.
+     
+*변수명 작성시 주의사항
+- 첫글자는 $,( _ )언더바, 영문자만 사용
+- 첫글자 다음은 영문자,숫자,$,( _ )언더바만 포함할 수 있음
+- 예약어(Reserved Words)는 사용불가. 자바스크립트에서 사용중인 단어가 있음.
+- Reserved Words
+    - 대소문자 구분
+    - 변수명 지을 때 되도록 의미를 부여해서 작성할 것.
+    - abc(o)
+      123abc(x)
+      Total#(x)
+      Two of(x)
+      int (x)
+      Not! (x)
+      _tot(o)
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+-->
+
+
+</body>
+</html>

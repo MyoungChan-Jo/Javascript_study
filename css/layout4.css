@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.txt1{text-decoration:underline; color:#6666cc;}
+
+.txt2{color:#cc0000;}
+
+.score{border-collapse:collapse; font:normal 12px/1.5em "돋움",Dotum,sans-serif; width:130px}
+.score th, .score td{border:1px solid black; padding:10px;}
+.result_t{color:#ff0000; font-weight:bold;}
