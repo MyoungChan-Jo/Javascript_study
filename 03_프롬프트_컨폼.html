@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>prompt/confirm</title>
+<script>
+    //prompt
+    document.write("*prompt질문*"+"<br>");
+    /*
+    var num1 = prompt("좋아하는 숫자르 입력하세요.", "7");
+    var num1 = prompt("좋아하는 숫자르 입력하세요.");
+    alert(num1);
+    document.write(num1+"<br>");
+    document.write(typeof(num1));//숫자를 입력했는데 문자형으로 인식.
+    */
+    /*
+    var num2 = prompt("좋아하는 과목을 입력하세요.");
+    document.write(num2+"<br>");
+    document.write(typeof(num2));
+    */
+    /*
+    var num3 = Number(prompt("좋아하는 숫자를 입력하세요."));
+    document.write(num3+"<br>");
+    document.write(typeof(num3));
+    */
+    /*
+    var num4 = parseInt(prompt("좋아하는 숫자를 입력하세요."));
+    document.write(num4+"<br>");
+    document.write(typeof(num4));
+    */
+    document.write("<hr>");
+    
+    
+    //confirm
+    /*
+    document.write("*comfrim질의응답*"+"<br>");
+    var txt = confirm("식사하셨나요?");
+    document.write(txt+"<br>");
+    document.write(typeof(txt));
+    */
+    
+    var q = confirm("당신은 코딩을 좋아하나요?");
+    var result = q ? "네" : "아니요";
+    document.write(result);
+    
+    
+</script>
+</head>
+<body>
+    <!--
+    *typeof()
+    변수에서 저장된 자료를 알고 싶을 때 사용한다.
+    
+    parseI(대문자)nt()
+    내장함수
+    -->
+</body>
+</html>

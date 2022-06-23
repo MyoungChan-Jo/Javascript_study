@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>조건문 if</title>
+<link rel="stylesheet" href="css/layout4.css">
+<script>
+    /*
+    //if는 만족할때만 실행
+    //값을 입력받아 70이상이면 합격으로 메세지가 나오게 하기.
+    document.write("*if*"+"<br>");
+    var num1 = Number(prompt("값을 입력 하세요1~100"));
+    if(num1 >= 70){
+        alert("합격입니다.");
+    }
+    */
+    
+    
+    /*
+    //if~else문
+    //값을 입력받아 70초과이면 합격 70이하이면 불합격되는 메세지가 나오게 하기.
+    document.write("*if~else*"+"<br>");
+    var num2 = Number(prompt("값을 입력하세요1~100."));
+    if(num2 > 70){ 
+        document.write("합격입니다.");
+    }else{
+        document.write("불합격입니다.");
+    }
+    */
+    
+    /*
+    //값을 입력받아(웹디자인 or 웹 퍼블리셔)
+    //수강료는 200,000원입니다. 수강료는 300,000원입니다.
+    var txt1 = prompt("웹디자인 or 웹 퍼블리셔");
+    if(txt1 == "웹디자인"){
+        document.write("수강료는 200,000원 입니다.");
+    }else{
+        documnet.write("수강료는 300,000원 입니다.");
+    }
+    */
+    
+    /*
+    //else if 조건이 여러개
+    //홀수,짝수,다시입력하세요.
+    var num3 = Number(prompt("숫자를 입력하세요."));
+    if(num3 % 2 == 0){
+        alert("짝수입니다.")
+    }else if(num3 % 2 ==1){
+        alert("홀수입니다.")
+    }else{
+        alert("다시입력하세요.")
+    }
+    */
+    
+    /*
+    //숫자를 입력받아(1or2or3)
+    //1:num1.gif  2:num2.gif 3:num3.gif else:다시입력하세요.
+    var num4 = Number(prompt("숫자를 입력하세요."));
+    if(num4 == 1){
+        document.write("<img src='images/num1.gif' width='30' height='30'>")
+    }else if(num4 == 2){
+        document.write("<img src='images/num2.gif' width='30' height='30'>")
+    }else if(num4 == 3){
+        document.write("<img src='images/num3.gif' width='30' height='30'>")
+    }else{
+        document.write("다시 입력하세요.")}
+    */
+    
+    /*
+    //숫자를 입력받아 1~100까지.
+    //90이상: 92가 찍히면서 A학점입니다. 80이상:숫자찍히면서 B학점입니다. 70이상:숫자찍히면서 C학점입니다. 60이상: 숫자찍히면서 D학점입니다. 60미만: 숫자뜨면서 E학점입니다.
+    var num5 = Number(prompt("시험 점수를 입력해주세요.1~100"));
+    if(num5 >= 90){
+        alert(num5 + " A학점입니다.")
+    }else if(num5 >= 80){
+        alert(num5 + " B학점입니다.")
+    }else if(num5 >= 70){
+        alert(num5 + " C학점입니다.")
+    }else if(num5 >= 60){
+        alert(num5 + " D학점입니다.")
+    }else{
+        alert(num5 + " E학점입니다.")
+    }
+    */
+    
+    /*
+    //가격을 입력받아(0이상~)
+    //만원 이상 10%, 오천원 이상 5%, 삼천원 이상 3%, 3천원 미만 1%.
+    //결과
+    //입력가는 10,000원입니다.
+    //할인가는 1,000원 입니다.
+    //계산가는 9,000원 입니다.
+    var num6, num7
+    num6 = Number(prompt("가격을 입력하세요 0원 이상"));
+    if(num6 >= 10000){
+        num7 = num6 * 0.1; //10%
+    }else if(num6 >= 5000){
+        num7 = num6 * 0.05;//5%
+    }else if(num6 >= 3000){
+        num7 = num6 * 0.03;//3%
+    }else{
+        num7 = num6 * 0.01;//1%
+    }
+    document.write("입력가는:<span class='txt1'>"+num6+"원</span> 입니다.<br>")
+    document.write("할인가는:<span class='txt1'>"+num7+"원</span> 입니다.<br>")
+    document.write("계산가는:<span class='txt1'>"+(num6-num7)+"원</span> 입니다.<br>")
+    */
+    
+    //첫번째 숫자를 입력하세요 1~100까지num8
+    //두번째 숫자를 입력하세요 1~100까지num9
+    //출력
+    // - 첫번째 입력한 숫자 : ?? 
+    // - 두번째 입력한 숫자 : ??
+    // - 결과 : 3개중 하나
+        // 첫번째 입력한 숫자가 더 큽니다.
+        // 두번째 입력한 숫자가 더 큽니다.
+        // 두 수는 같은 수 입니다.
+    /*
+    var num8, num9
+    num8 = Number(prompt("숫자를 입력하세요.1~100"));
+    num9 = Number(prompt("숫자를 입력하세요.1~100"));
+    if(num8 > num9){
+        document.write("- 첫번째 입력한 숫자 : <span class='txt2'>" +num8+"</span><br>");
+        document.write("- 두번째 입력한 숫자 : <span class='txt2'>" +num9+"</span><br>");
+        document.write("- 결과 : <span class='txt2'>첫번째 입력한 숫자가 더 큽니다.</span>")  ;
+    }else if(num8 < num9){
+        document.write("- 첫번째 입력한 숫자 : <span class='txt2'>" +num8+"</span><br>");
+        document.write("- 두번째 입력한 숫자 : <span class='txt2'>" +num9+"</span><br>");
+        document.write("- 결과 : <span class='txt2'>두번째 입력한 숫자가 더 큽니다.</span>");
+    }else{
+        document.write("- 첫번째 입력한 숫자 : <span class='txt2'>" +num8+"</span><br>");
+        document.write("- 두번째 입력한 숫자 : <span class='txt2'>" +num9+"</span><br>");
+        document.write("- 결과 : <span class='txt2'>두 수는 같은 수 입니다.</span>");
+    }
+    
+    var num8,num9,result8;
+    num8=Number(prompt("첫번째 숫자를 입력하세요. 1-100"));
+    num9=Number(prompt("두번째 숫자를 입력하세요. 1-100"));
+    if(num8 > num9){
+        result8 = "첫번째 입력한 숫자가 더 큽니다.";
+    }else if(num8 < num9){
+        result8 = "두번째 입력한 숫자가 더 큽니다.";
+    }else{
+        result8 = "두 수는 같습니다.";
+    }
+    document.write("- 첫번째 입력한 숫자:"+ num8+"<br>");
+    document.write("- 두번째 입력한 숫자:"+ num9+"<br>");
+    document.write("- 결과:"+ result8);
+    */
+    
+    /*
+    //3개의 값을 받아 모두 60이 초과되면 이미지가 출력된다. 하나라도 60이하이면 텍스트가 출력된다.&&=and
+    var num10, num11, num12, result10
+    num10 = Number(prompt("숫자를 입력하세요"));
+    num11 = Number(prompt("숫자를 입력하세요"));
+    num12 = Number(prompt("숫자를 입력하세요"));
+    if (num10 > 60 && num11 > 60 && num12 > 60){
+        result10 = "<img src='images/roll2_1.gif'>";
+    }else{
+        result10 = "60이하가 있네요???";
+    }
+    document.write(result10);
+    */
+    
+    /*
+    //3개의 값을 받아 하나라도 60이 초과되면 이미지 출력, 모두 60이하이면 텍스트 출력.||=or
+    var num13, num14, num15, result13
+    num13 = Number(prompt("숫자를 입력하세요"));
+    num14 = Number(prompt("숫자를 입력하세요"));
+    num15 = Number(prompt("숫자를 입력하세요"));
+    if (num13 > 60 || num14 > 60 || num15 > 60){
+        result13 = "<img src='images/roll2_1.gif'>";
+    }else{
+        result13 = "60이하가 있네요???";
+    }
+    document.write(result13);
+    */
+    
+    /*
+    //점수 입력해서 평균구해서 합격 불합격 통보
+    var k,m,e,tot,avg,result14;
+    k = Number(prompt("국어점수 입력"));
+    m = Number(prompt("수학점수 입력"));
+    e = Number(prompt("영어점수 입력"));
+    tot = k + m + e; //총점
+    avg = Math.round(tot / 3); //평균 Math.ceil올림 | Math.round반올림 | Math.floor내림
+    if(avg >= 70){
+        result14 = "합격";
+        
+    }else{
+        result14 = "불합격";
+    }
+    var tb;
+    tb = "<table class='score'>";
+    tb += "<tr><th>국어</th><td>"+k+"</td></tr>";
+    tb += "<tr><th>수학</th><td>"+m+"</td></tr>";
+    tb += "<tr><th>영어</th><td>"+e+"</td></tr>";
+    tb += "<tr><th>총점</th><td>"+tot+"</td></tr>";
+    tb += "<tr><th>평균</th><td>"+avg+"</td></tr>";
+    tb += "<tr><th>결과</th><td class='result_t'>"+result14+"</td></tr>";
+    tb += "</table>";
+    document.write(tb);
+    */
+    
+    //if문 중첩시키기. ex)if세과목 평균이상이면 합격이다.근데 if과목당 최소점수가 있다. 
+        //window.location 브라우저의 현재 url주소값에 대한 정보 제공 객체(window 생략가능하다.)
+        //location.reload()브라우저 새로고침
+    var id = "abc";
+    var pwd = "1234";
+    var u_id = prompt("아이디를 입력하세요.","");
+    var u_pwd = prompt("비밀번호를 입력하세요.","");
+    if(id == u_id){//일치
+        if(pwd == u_pwd){
+            document.write(u_id + "님 반갑습니다.!");
+        }else{
+            alert("비밀번호가 일치하지 않습니다.")
+            location.reload();
+        }
+    }else{//불일치
+        alert("아이디가 일치하지 않습니다.");
+        location.reload();
+    }
+    
+</script>
+</head>
+<body>
+    
+</body>
+</html>
