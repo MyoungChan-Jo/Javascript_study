@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연습</title>
+<script>
+document.write("10~4까지만 while<br>");
+var a = 10;
+    while(a >= 4){
+        if(a)
+        document.write(a+" ");
+        a--;
+    }
+    
+    
+    document.write("<hr>");
+document.write("20~3까지만 while<br>");
+var b = 20; //조건 a 는 20이다.
+    while(b >=3){//조건 a 는 3 이상이다.
+        if(b)// 조건 a를 표시한다. 
+        document.write(b+" ");
+        b--;//조건 a에서 하나씩 빼서 출력한다.
+    }
+    
+    
+  document.write("<hr>");  
+  document.write("15~10까지만 while<br>");  
+        var c = 15;//조건값 b 는 15이다.
+        while(c >= 10){// 동시에 조건값 b는 10보다 크다.
+            if(c) //b를 출력한다. 한칸 띄어서. 1씩 차감하여.
+            document.write(c+" ");
+            c--;
+        }
+    
+    
+    document.write("<hr>");
+    document.write("7~1까지만 do~while<br>");
+        var d = 7;// 조건명 i 는 7이다.
+    do{ //출력한다. 조건명 i 에 한칸띄고
+        document.write(d+" ");
+        d--; //조건i에서 1씩 빼서 출력한다.
+    }while(d >= 1);//동시에 조건 i는 1이상이다.
+    
+    
+    document.write("<hr>");
+    document.write("20~30까지만 do~while<br>");
+    var e = 20;//조건 값 c 는 20 이다.
+    do{
+        document.write(e+" ")//출력한다. 한칸 띄고
+        e++;//조건값 c는 하나씩 더하여 출력한다.
+    }while(e <= 30);//동시에. c는 30 이하이다.
+    
+    
+    document.write("<hr>");
+    document.write("100~45까지만 do~while<br>");
+    var f = 100; //조건값 d 는 100 이다.
+    do{//실행한다.
+        document.write(f+" ")//값 d를 출력한다. 한칸간격띄고
+        f--; //값 d 에서 1씩 차감하여서.
+    }while(f >=45);//동시에 값 d 는 45이상이다.
+    
+    document.write("<hr>");
+    document.write("45~100까지만 do~while<br>");
+    var g = 45; //조건값 d 는 45 이다.
+    do{//실행한다.
+        document.write(g+" ")//값 d를 출력한다. 한칸간격띄고
+        g++; //값 d 에서 1씩 더하여서.
+    }while(g <=100);//동시에 값 d 는 100이하이다.
+    
+    
+    document.write("<hr>");
+    document.write("1~20까지의 홀수의 누적합 while<br>");
+    var h = 1; // 조건값 h는 1이다.
+    var hap1 = 0; // 조건값 합1 은 0이다.
+    while(h <= 20){ // 동시에 조건값 h는 20이하이다. 
+        if(hap1 = hap1+h); // 합1 은 합1 + 조건값h이다.
+        h+=2;  //h는 2씩 더한다.
+    }
+    document.write(hap1); // 출력한다. 조건값 합1을.
+    
+    
+    document.write("<hr>");
+    document.write("1~20까지의 홀수의 누적합 do~while<br>");
+    
+    
+    var i = 1; //조건값 i 는 1 이다.
+    var hap2 = 0; //조건값 합2 는 0이다.
+    do{ 
+        hap2 = hap2 + i; //합 2는 합2와 i를 더한 값이다.
+        document.write(hap2); // 조건값 합 2를 출력한다.
+        i += 2;//조건값 i는 2씩 더한다.
+    }while(i <= 20); //동시에 조건값 i는 20이하이다.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+</head>
+<body>
+    
+</body>
+</html>
+   
