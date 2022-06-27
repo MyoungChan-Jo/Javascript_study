@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>String(문자객체)</title>
+<script>
+//String
+//참고이미지 09_string.JPG
+        var text1 = "자바스크립트 JavaScriapt";
+        document.write(text1 + "<br>");
+        document.write(text1.bold() + "<br>"); //굵게
+        document.write(text1.link("http://m.naver.com") + "<br>"); //링크를 걸어 반환
+        document.write(text1.length + "<br>"); //몇글자인지 공백 포함해서.
+        document.write(text1.toLowerCase()+ "<br>"); //영문 대문자를 소문자로 바꿔준다.
+        document.write(text1.toUpperCase() + "<br>"); //영문 소문자를 대문자로 바꿔준다.
+        document.write(text1.indexOf("J") + "<br>"); //처음부터 ()를 찾아 최초로 일치하는 인덱스번호를 반환, 없을경우 -1로 반환. ※인덱스 번호는 0부터 시작한다.
+        document.write(text1.indexOf("o") + "<br>"); //단어에 소문자 o 없음. > -1 출력
+        document.write(text1.indexOf("a") + "<br>"); //a가 총 3개지만, 처음꺼 8위치꺼 하나만.
+        document.write(text1.lastIndexOf("a") + "<br>"); //끝부터 ()를 찾아 최초로 일치하는 인덱스번호를 반환, 없을경우 -1로 반환. ※인덱스 번호는 0부터 시작한다.
+        document.write(text1.charAt(3) + "<br>"); //인덱스번호 3에 위치한 데이터를 출력..
+        document.write(text1.substring(7,10) + "<br>"); // 7~9까지(n-1한 값으로 출력)
+        document.write(text1.substr(5,4) + "<br>"); //5번 인덱스부터 공백포함해서 4글자
+        document.write(text1.replace("Java","java") + "<br>");//치환
+        document.write(text1.slice(3,10) + "<br>"); //3~9(n-1한 값으로 출력)
+        document.write(text1.concat("Sc") + "<br>"); //문자를 결합: ScriaptSc
+        document.write(text1.split(" ") + "<br>"); //n을 기준으로 분리(,)
+        document.write(text1.split("a") + "<br>"); //a자체를 없애면서 그자리에 , 들어감
+        
+</script>
+</head>
+<body>
+    
+</body>
+</html>

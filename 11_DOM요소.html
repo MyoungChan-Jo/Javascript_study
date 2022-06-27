@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>DOM(Document Object Model)요소</title>
+<script>
+    //호출은 위에서
+    //ex4
+    function ex4_js(){
+        document.getElementById("ex4").src = "images/roll2_1.gif";
+    }
+    
+    //ex5
+    function ex5_js(){
+        var a = document.getElementsByClassName("ex5_1");
+        a[0].style.color = "blue"; //확인3
+        a[1].innerHTML = "변경됐나요?"; //확인4
+        document.getElementById("ex5_result").innerHTML = a.length;
+    }
+    
+    //ex6
+    function ex6_js(){
+        var b = document.getElementsByClassName("ex6");
+        var i;
+        for(i=0; i<b.length; i++){//0부터 3까지 총 4개
+            b[i].style.backgroundColor="orange";
+        } 
+    }
+    
+    //ex7
+    function ex7_js(){
+        var c = document.getElementsByTagName("h5");
+        c[0].innerHTML = "변경됐나요?";//확인1
+        document.getElementById("ex7_result").innerHTML = c[1].innerHTML;//확인2
+    }
+</script>
+</head>
+<body>
+    <!--자바스크립트를 통한 수정-->
+    <p id="ex1">안녕하세요!!!</p>
+    <hr>
+    <p id="ex2">확인</p>
+    <p><button type="button" onclick="document.getElementById('ex2').style.color = 'red'">클릭해봐</button></p>
+    <hr>
+    <p id="ex3">확인</p>
+    <hr>
+    <p><img src="images/roll1_1.gif" alt="#" width="200" height="201" id="ex4"></p>
+    <p><button type="button" onclick="ex4_js()">클릭</button></p>
+    <hr>
+    <ul>
+        <li id="ex5">확인1</li>
+        <li>확인2</li>
+        <li class="ex5_1">확인3</li>
+        <li class="ex5_1">확인4</li>
+        <li>확인5</li>
+    </ul>
+    <p id="ex5_result">확인</p>
+    <p><button type="button" onclick="ex5_js()">클릭</button></p>
+    <hr>
+    <div>
+        <p>확인1</p>
+        <p class="ex6">확인2</p>
+        <p>확인3</p>
+        <p class="ex6">확인4</p>
+        <p class="ex6">확인5</p>
+        <p class="ex6">확인6</p>
+        <p>확인7</p>
+        <p><button type="button" onclick="ex6_js()">더블클릭</button></p>
+    </div>
+    <hr>
+    
+    <div>
+        <h5>확인1</h5>
+        <h5>확인2</h5>
+        <h5>확인3</h5>
+        <h5>확인4</h5>
+        <h5>확인5</h5>
+        <p><button type="button" onclick="ex7_js()">클릭</button></p>
+        <p id="ex7_result">확인</p>
+    </div>
+
+    <script>
+/*
+document.get[E]lement[B]y[I]d("id명")
+document.get[E]lements[B]y[T]ag[N]ame("tag명")
+document.get[E]lements[B]y[C]lass[N]ame("class명")
+*/
+    //ex1 innerHTML: HTML 요소의 내용을 가져오거나 바꿀 수 있음. 메모장에서 왠만하면 3쓰지 말기
+    //document.getElementById("").style.property = new style 
+        document.getElementById("ex1").innerHTML = "Hello~!!";
+        document.getElementById("ex1").style.color = "red";
+        document.getElementById("ex1").style.fontFamily = "Arial";
+        document.getElementById("ex1").style.fontSize = "30px;";
+        
+        //ex3
+        var element = document.getElementById("ex3");
+        element.innerHTML = "ex3 내용변경";
+        
+        
+    </script>
+</body>
+</html>
