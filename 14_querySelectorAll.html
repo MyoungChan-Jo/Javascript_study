@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>querySelectorAll(하위버전 지원 안됨. ie9이상 지원)</title>
+<script>
+    //ex7
+    function ex7(){
+        var g = document.querySelectorAll("h4");
+        g[0].style.backgroundColor="green";
+    }
+    
+    //ex8
+    function ex8(){
+        var i = document.querySelectorAll(".ex8");
+        var j;
+        for(j=0; j<i.length; j++){
+            i[j].style.backgroundColor="yellow";
+        }
+    }
+    
+    //ex9
+    function ex9(){
+        var h = document.querySelectorAll(".ex9");
+        h[0].style.backgroundColor = "pink";
+    }
+    
+    //ex10
+    function ex10(){
+        var k = document.querySelectorAll("a[target]");
+        var m;
+        for(m=0; m<k.length; m++){//2
+            k[m].style.border = "5px double red";
+    }
+    }
+    //document.querySelectorAll("div > p")
+    //document.querySelectorAll("h2,div,span")
+</script>
+</head>
+<body>
+    <p id="ex1">javascript</p>
+    <hr>
+    
+    <p id="ex2">javascript</p>
+    <p id="ex2_r">test</p>
+    <hr>
+    
+    <h3>제목1</h3>
+    <h3>제목2</h3>
+    <p id="ex3">test</p>
+    <hr>
+    
+    <div id="ex4">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div><!--ex4-->
+    <p id="ex4_r">test</p>
+    <hr>
+    
+    <p class="ex5">내용1</p>
+    <p class="ex5">내용2</p>
+    <p class="ex5">내용3</p>
+    <p id="ex5_r">test</p>
+    <hr>
+    
+    <p class="ex6">내용1</p>
+    <p class="ex6">내용2</p>
+    <p id="ex6_r">test</p>
+    <hr>
+    
+    <h4>내용1</h4>
+    <h4>내용2</h4>
+    <h4>내용3</h4>
+    <p><button type="button" onclick="ex7()">확인</button></p>
+    <hr>
+    
+    <ul>
+        <li>내용1</li>
+        <li class="ex8">내용2</li>
+        <li>내용3</li>
+        <li class="ex8">내용4</li>
+        <li>내용5</li>
+    </ul>
+    <p><button type="button" onclick="ex8()">확인</button></p>
+    <hr>
+    
+    <p class="ex9">내용1</p>
+    <p class="ex9">내용2</p>
+    <p class="ex9">내용3</p>
+    <p class="ex9">내용4</p>
+    <p class="ex9">내용5</p>
+    <p><button type="button" onclick="ex9()">확인</button></p>
+    <hr>
+    
+    <div>
+        <a href="#">link1</a>
+        <a href="#" target="_blank">link2</a>
+        <a href="#" target="_blank">link3</a>
+        <p><button type="button" onclick="ex10()">확인</button></p>
+    </div>
+<script>
+    //ex1
+    document.getElementById("ex1").innerHTML = "jquery";
+    
+    //ex2,ex2_r
+    var a = document.getElementById("ex2");
+    document.getElementById("ex2_r").innerHTML = "jquery : " + a.innerHTML;
+    
+    //ex3
+    var b = document.getElementsByTagName("h3");
+    document.getElementById("ex3").innerHTML = "내용추가 : " + b[0].innerHTML;
+    
+    //ex4
+    var c = document.getElementById("ex4");
+    var d = c.getElementsByTagName("p");
+    document.getElementById("ex4_r").innerHTML = "내용추가 : " + d[1].innerHTML;
+    
+    //ex5
+    var e = document.getElementsByClassName("ex5");
+    document.getElementById("ex5_r").innerHTML = "내용추가 : " + e[2].innerHTML;
+    
+    //ex6 document.querySelectorAll(id,class,tag,속성 ... etc)
+    var f = document.querySelectorAll("p.ex6");
+    document.getElementById("ex6_r").innerHTML = "내용추가 : " + f[1].innerHTML;
+        f[1].style.backgroundColor = "pink";
+    
+     
+</script>
+</body>
+</html>

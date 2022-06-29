@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+<script>
+    //수강신청을 하셨나요 
+    function ok(){
+        alert("그렇군요");
+    }function no(){
+        alert("하세요.");
+    }
+    
+    //좋아하는 과목은 무엇입니까?
+    function list1(i){
+        if(i=='웹표준'){
+            alert('웹표준 입니다.');
+        }else if(i=='html5'){
+            alert('html5 입니다.');
+        }else{
+            alert('jquery 입니다.');
+        }
+    }
+    
+    //우리나라 수도는 어디인가요?
+    function q(){
+        var ans = document.getElementById("ans_r").value;
+        //아무것도 안적었을때
+        if(ans == ""){//내용이 없으면을 의미.
+            alert("내용을 입력하세요.");
+            document.getElementById("ans_r").focus();//커서.포커스
+        }else if(ans == '서울' || ans == "A"){
+            alert('정답입니다.');
+        }else{
+            alert("땡. 다시입력하세요.")
+            document.getElementById("ans_r").value = "";//내용 초기화
+            document.getElementById("ans_r").focus();//커서.포커스
+        }
+    }
+</script>
+</head>
+<body>
+    <p>수강신청을 하셨나요?</p>
+    <p>
+        <input type="button" value="예" onclick="ok()">
+        <input type="button" value="아니요" onclick="no()">
+    </p>
+    <hr>
+    <p>좋아하는 과목은 무엇입니까?</p>
+    <p>
+        <input type="button" value="웹표준" onclick="list1('웹표준')">
+        <input type="button" value="HTML5" onclick="list1('html5')">
+        <input type="button" value="JQUERY" onclick="list1('jquery')">
+    </p>
+    <hr>
+    <p>우리나라 수도는 어디인가요?<br>
+            (A) 서울 (B) 부산 (C) 광주 (D) 대구
+    </p>
+    <p>
+        정답:
+        <input type="text" id="ans_r">
+        <input type="button" value="확인" onclick="q()">
+    </p>
+</body>
+</html>

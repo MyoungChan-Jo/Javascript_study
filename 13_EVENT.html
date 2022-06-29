@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<script>
+//ex2
+    function ex2(i){
+        i.innerHTML = "내용변경!!"; //클릭시 내용 변경
+    }
+    
+//ex3
+    function ex3(){
+        document.getElementById("ex3").innerHTML = Date();
+    }
+    
+//ex5
+    function ex5(){
+        var i = document.getElementById("ex5");
+        i.value = i.value.toUpperCase(); //입력후 커서 변경하면 대문자로 변환.
+    }
+    
+//ex6_1 ex6_2
+    function ex6_1(j){
+        j.innerHTML="onmouseover";
+    }
+    function ex6_2(j){
+        j.innerHTML="onmouseout";
+    }
+    
+//ex7_1 ex7_2
+    function ex7_1(k){
+        k.style.backgroundColor="#1ec5e5";
+        k.innerHTML="onmousedown";
+    }
+    function ex7_2(k){
+        k.style.backgroundColor="#d94a35";
+        k.innerHTML="onmouseup";
+    }//한번 들어간건 안없어짐. 새로 만들어 주어야 함.
+</script>
+</head>
+<body>
+    <p onclick="this.innerHTML='내용변경!!'">클릭!!</p><!--p태그 클릭하면 내용 변경.-->
+    <hr>
+    <p onclick="ex2(this)">클릭!!</p>
+    <hr>
+    <p id="ex3">확인</p>
+    <p><button type="button" onclick="ex3()">현재날짜</button></p><!--버튼 클릭하면 확인 텍스트 변경-->
+    <hr>
+    <p id="ex4">확인</p>
+    <p><button type="button" id="ex4_btn">현재날짜</button></p><!--버튼 클릭하면 확인 텍스트 변경-->
+    <hr>
+    <p>id : <input type="text" id="ex5" onchange="ex5()"></p><!--onblur 도 가능-->
+    <hr>
+    <p onmouseover="ex6_1(this)" onmouseout="ex6_2(this)">확인</p>
+    <hr>
+    <p onmousedown="ex7_1(this)" onmouseup="ex7_2(this)">확인</p>
+    
+    
+    <script>
+        document.getElementById("ex4_btn").onclick = ex4;//위의 ex4 와 다른 이름.
+        function ex4(){
+            var a1 = new Date(); //현재날짜
+            var a2 = a1.getFullYear(); //연도
+            var a3 = a1.getMonth() + 1;// +1 해주어야 원래 달 나옴.
+            var a4 = a1.getDate();//일
+            var a5 = a1.getHours();//시
+            var a6 = a1.getMinutes();//분
+            var a7 = a1.getSeconds();//초
+            document.getElementById("ex4").innerHTML =
+                a2+"년 "+a3+"월 "+a4+"일 "+a5+"시 "+a6+"분 "+a7+"초";
+        }
+    </script>
+</body>
+</html>
