@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>setInterval</title>
+<script>
+    //
+    var count = 1;
+    setInterval(function(){
+        count++;
+        var result = "";
+        //document.write(count); 23456....
+        for(var i = 1; i < count; i++){
+            //document.write(i); i 결과 체크
+            result +="*";
+        }
+        document.write(result + "<br>");
+        if(count > 5){// count가 5를 초과하면 다시 1부터 시작.
+            count = 1;
+        }
+    },500);
+</script>
+</head>
+<body>
+    
+</body>
+</html>

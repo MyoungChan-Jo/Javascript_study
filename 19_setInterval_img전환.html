@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>setInterval</title>
+<script>
+    //window.onload() : 브라우저가 열렸을 때 페이지의 모든 요소들이 로드될때 호출된다. 한페이지에 하나만 쓸 수 있다.
+    window.onload = function(){
+        var count = 1;
+        var img1 = document.getElementById("photo1");
+        var img2 = document.getElementById("photo2");
+        setInterval(function(){
+            count++;//2
+            //console.log(count);
+            if(count >= 4){
+                count = 1;
+            }
+            //console.log(count);
+            img1.src ="images/s_0"+count+".gif"; 
+            img2.src = "images/roll"+count+"_1.gif";
+        },1000);
+    }
+</script>
+</head>
+<body>
+    <p><img id="photo1" src="images/s_01.gif" alt="하나" width="109" height="83"></p>
+    <p><img id="photo2" src="images/roll1_1.gif" alt="하나" width="200" height="201"></p>
+</body>
+</html>
