@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>setInterval-한 글자 씩 출력.</title>
+<script>
+    var txt = "안녕하세요!반가워요~";
+    var wrap1;
+    var count;
+    window.onload = function(){
+        wrap1 = document.getElementById("wrap");
+        count = 0;
+        
+        wrap1.innerHTML = txt.charAt(0);// charAt(i): i번에 해당하는 인덱스에 저장된 문자 데이터를 반환시킨다. ex) 안
+        //console.log(txt.length); 11 인덱스 개수량
+        //console.log(txt.charAt(count)); 안 첫번재 해당하는 값
+        setInterval(function(){
+            count++;
+            if(count >= txt.length){
+                count = 0;
+            }
+            wrap1.innerHTML = txt.charAt(count);
+        },1000);
+    }
+</script>
+</head>
+<body>
+    <p id="wrap">이곳에 출력..</p><!--#wrap-->
+</body>
+</html>

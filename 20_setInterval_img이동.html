@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval</title>
+</head>
+<style>
+    #wrap{margin:30px; border:1px solid #cccccc; width:300px; height:200px; position:relative;}
+    #arrow{width:50px; height:80px; position:absolute; left:25px; top:50px;}
+</style>
+<script>
+    var arrow;
+    var x;
+    var stepX;
+    window.onload = function(){
+        arrow = document.getElementById("arrow");
+        x = 25;
+        stepX = 2;
+        setInterval(function(){//25 + 2 = 27 부터 시작.
+            x += stepX
+            //console.log(x);
+            if(x > 250){
+                stepX = -2;
+                arrow.getElementsByTagName("img")[0].src = "images/left_btn.png";
+            }
+            if(x <=25){
+                stepX = 1;
+                arrow.getElementsByTagName("img")[0].src = "images/right_btn.png";
+            }
+            arrow.style.left = x + "px";
+        },30)
+    }
+</script>
+<body>
+    <div id="wrap">
+        <p id="arrow"><img src="images/right_btn.png" alt="arrow" width="50" height="80"></p>
+    </div><!--#wrap-->
+</body>
+</html>
