@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>setInterval-한글자씩연결출력</title>
+<script>
+    var txt = "JAVASCRIPT JQUERY HTML5";
+    var wrap1;
+    var count;
+    window.onload = function(){
+        wrap1 = document.getElementById("wrap");
+        count = 0;
+        wrap.innerHTML = txt.charAt(0); //p태그 wrap에 var txt 의 첫번째 글자를 출력해라.
+        //console.log(txt.length); //쓴 txt 의 글자수. 23
+        //console.log(txt.charAt(count)); // 쓴 txt의 첫번째 데이터. J
+        
+        setInterval(function(){
+            count++;
+            if(count >= txt.length){
+                wrap.innerHTML = ""; 
+                count = 0; //카운트 값이 txt글자수를 넘어가면 출력값을 초기화하고 카운트 0부터 시작한다. ex) -1을 주면 빈 칸에서 시작하고 0을 주면 J부터 다시 시작한다.
+            }
+            wrap.innerHTML += txt.charAt(count);
+        },300)
+    }
+    
+</script>
+</head>
+<body>
+    <p id="wrap">이곳에 출력</p>    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>setInterval-카운트 타이머</title>
+<style>
+    #wrap{font-size:60px; text-align:center;}    
+</style>
+<script>
+/*
+new Date()
+new Date(year,month,day,hours,minutes,seconds,milliseconds)
+6개 숫자: 년,월,일,시,분,초
+5개 숫자: 년,월,일,시,분
+4개 숫자: 년,월,일,시
+3개 숫자: 년,월,일
+2개 숫자: 년,월
+
+.getTime() 1970년 1월 1일 이후 경과시간을 밀리초로 제공하는 메서드
+*/
+    
+    var date1 = new Date(2020,09,28).getTime(); // 2020.10.28
+  //var date1 = new Date(2020,09,28) : Wed Oct 28 2020 00:00:00 GMT+0900 (대한민국 표준시)
+  //document.write(date1);
+    var x = setInterval(function(){
+        var date2 = new Date().getTime();
+        //document.write(date2); test
+        var now = date1 - date2;
+        //document.write(now); test
+        var days = Math.ceil(now/(1000*60*60*24)); //Dday는 당일은 포함 안함.*
+        var hours = Math.ceil((now%(1000*60*60*24))/(1000*60*60));
+        var minutes = Math.ceil((now%(1000*60*60))/(1000*60));
+        var seconds = Math.ceil((now%(1000*60))/1000);
+        document.getElementById("wrap").innerHTML = 
+            days + "일 " + 
+            hours + "시간 " + 
+            minutes + "분 " + 
+            seconds + "초 남음....";
+        if(now < 0){
+            clearInterval(x);
+            document.getElementById("wrap").innerHTML = "종료되었습니다. "// 디데이 만료시 끝내버리기.
+        }
+    },1000);
+</script>
+</head>
+<body>
+    <p id="wrap"></p>    
+</body>
+</html>
